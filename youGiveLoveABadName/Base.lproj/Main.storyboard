@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,16 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bonjovi.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR2-VY-ejg">
-                                <rect key="frame" x="0.0" y="197" width="320" height="174"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonjovi.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR2-VY-ejg">
+                                <rect key="frame" x="0.0" y="201" width="600" height="198"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-wJ-vCJ">
-                                <rect key="frame" x="134" y="498" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-wJ-vCJ">
+                                <rect key="frame" x="274" y="503" width="53" height="30"/>
                                 <state key="normal" title="Expand">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -32,21 +32,27 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TR2-VY-ejg" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="3Wx-uj-wyM"/>
+                            <constraint firstItem="TR2-VY-ejg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="HSP-tX-e1F"/>
+                            <constraint firstItem="TR2-VY-ejg" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.33" id="NWC-wl-tGb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zaR-wJ-vCJ" secondAttribute="bottom" constant="67" id="d1s-da-l98"/>
+                            <constraint firstAttribute="centerX" secondItem="zaR-wJ-vCJ" secondAttribute="centerX" constant="-0.5" id="jhl-qm-fkn"/>
+                            <constraint firstItem="TR2-VY-ejg" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="rQy-ZI-xCW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bonJovi" destination="TR2-VY-ejg" id="Wbp-Ut-2KG"/>
+                        <outlet property="expandButton" destination="zaR-wJ-vCJ" id="3hq-JC-LXb"/>
+                        <outlet property="imageHeightConstraint" destination="NWC-wl-tGb" id="i0D-3D-LEj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1059.375" y="505.9859154929577"/>
         </scene>
     </scenes>
     <resources>
         <image name="bonjovi.png" width="466" height="310"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
